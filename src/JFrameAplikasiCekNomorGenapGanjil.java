@@ -83,7 +83,13 @@ public class JFrameAplikasiCekNomorGenapGanjil extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        var nilai = Integer.parseInt(jTextField1.getText());
+        var input = jTextField1.getText();
+        if (input.isEmpty()){
+            JOptionPane.showMessageDialog(this, "inputan tidak boleh kosong!", "error", JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+        
+        var nilai = Integer.parseInt(input);
         
         var sb = new StringBuilder();
         sb.append(nilai).append(" adalah bilangan ");

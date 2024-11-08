@@ -1,5 +1,48 @@
 # Tugas 1 - Aplikasi Cek Nomor Genap/Ganjil ([screenshot](#screenshot))
 
+Aplikasi Java Swing ini digunakan untuk mengecek apakah sebuah angka merupakan **genap**, **ganjil**, atau **bilangan prima**. Dibuat menggunakan NetBeans IDE dan GUI Swing, aplikasi ini memiliki antarmuka sederhana yang memungkinkan pengguna memasukkan angka, memvalidasinya, dan menampilkan hasilnya dalam dialog pop-up.
+
+## Fitur
+- **Cek apakah angka genap atau ganjil**: Menunjukkan apakah angka yang dimasukkan merupakan bilangan genap atau ganjil.
+- **Cek bilangan prima**: Untuk bilangan ganjil, juga akan mengecek apakah angka tersebut merupakan bilangan prima.
+- **Validasi input**: Memastikan hanya nilai numerik yang diterima.
+- **Auto-clear saat fokus**: Menghapus input secara otomatis saat kotak input diklik, untuk pengalaman pengguna yang lebih baik.
+
+## Persiapan Awal
+
+### Prasyarat
+- Java Development Kit (JDK) versi 8 atau lebih tinggi
+- NetBeans IDE (atau IDE lain yang mendukung aplikasi Java Swing)
+
+### Menjalankan Aplikasi
+1. Clone atau unduh repositori kode sumber ini.
+2. Buka proyek di NetBeans atau IDE Java pilihan kamu.
+3. Jalankan kelas `JFrameAplikasiCekNomorGenapGanjil` untuk memulai aplikasi.
+
+### Cara Penggunaan
+1. **Masukkan angka** di kotak input yang disediakan.
+2. Klik tombol **"Cek ganjil/genap/prima"** untuk melihat hasilnya:
+   - Aplikasi akan menampilkan pop-up yang menunjukkan apakah angka tersebut:
+     - **Genap** atau **Ganjil**.
+     - Jika ganjil, aplikasi juga akan memeriksa apakah angka tersebut merupakan bilangan **prima**.
+3. **Input tidak valid**: Jika nilai non-numerik dimasukkan, dialog kesalahan akan muncul meminta input berupa angka saja.
+
+## Penjelasan Kode
+
+### Fungsi Utama
+- **Pengecekan Bilangan** (`jButton1ActionPerformed`):
+  - Mengambil input angka yang dimasukkan pengguna.
+  - Mengecek apakah angka genap atau ganjil, dan menambahkan "genap" atau "ganjil" pada output.
+  - Memanggil `isPrime(int num)` untuk menentukan apakah angka tersebut prima dan menambahkan "dan prima" jika benar.
+
+- **Pemeriksaan Bilangan Prima** (`isPrime`):
+  - Mengembalikan `true` jika angka tersebut prima dengan memeriksa keterbagian sampai akar kuadratnya.
+
+- **Validasi Input** (`jTextField1KeyTyped`):
+  - Memastikan hanya input numerik dengan membatasi karakter input pada angka dan tombol backspace.
+
+## Detail tugas
+
 1. Deskripsi Program:
 
    - GUI terdiri dari JTextField untuk input angka dan tombol Cek
